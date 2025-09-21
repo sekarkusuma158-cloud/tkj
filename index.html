@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gladys store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>👕 gladys store</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#products">Produk</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search -->
+  <section class="search-bar">
+    <input type="text" id="searchInput" placeholder="cari baju favoritmu...">
+    <button>cari</button>
+  </section>
+
+  <!-- Produk -->
+  <section id="products" class="product-section">
+    <h2>Koleksi Baju Terbaru</h2>
+    <div class="product-list">
+      <div class="product-card">
+        <img src="dd850040-0ab0-4bc2-b19d-fa426fb067ab.jfif" alt="Baju 1">
+        <h3>Dress</h3>
+        <p>Rp 120.000</p>
+        <button>Beli Sekarang</button>
+      </div>
+      <div class="product-card">
+        <img src="@intothetrashcan_.jfif" alt="Baju 2">
+        <h3>gaun santai</h3>
+        <p>Rp 150.000</p>
+        <button>Beli Sekarang</button>
+      </div>
+      <div class="product-card">
+        <img src="White Dress With Delicate Flower Print, Floral Summer Dress, Sleeveless Sundress, White Casual Dress PNG Transparent Image and Clipart for Free Download.jfif" alt="Baju 3">
+        <h3>Dress Floral</h3>
+        <p>Rp 200.000</p>
+        <button>Beli Sekarang</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="contact-section">
+    <h2>Hubungi Kami</h2>
+    <form>
+      <input type="text" placeholder="Nama Anda" required>
+      <input type="email" placeholder="Email Anda" required>
+      <textarea placeholder="Pesan Anda..." required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 gladys store. Semua Hak Dilindungi.</p>
+    
+<script>
+  function cariBaju() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let produk = document.getElementsByClassName("produk");
+
+    for (let i = 0; i < produk.length; i++) {
+      let nama = produk[i].getAttribute("data-nama").toLowerCase();
+
+      if (nama.includes(input)) {
+        produk[i].style.display = "block";
+      } else {
+        produk[i].style.display = "none";
+      }
+    }
+  }
+</script>
+</body>
+</html>
